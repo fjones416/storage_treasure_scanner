@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block content %}
+<table id="data" class="table table-striped">
+  <thead>
+    <tr>
+      <th>Auction Listing URL</th>
+      <th>Date Added To Queue</th>
+      <th>Countdown Hours Remaining</th>
+      <th>Current High Bid</th>
+      <th>Total Views</th>
+      <th>Total Bids</th>
+      <th>Bid To View Ratio</th>
+      <th>High Value Keyword Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for auction_listing in auction_listing_data %}
+    <tr>
+      <td>
+        <a href="{{ auction_listing.auction_listing_url }}"
+          >{{auction_listing.auction_listing_url}}</a
+        >
+      </td>
+      <td>{{auction_listing.date_added_to_queue}}</td>
+      <td>{{auction_listing.countdown_timer_hours_remaining}}</td>
+      <td>{{auction_listing.current_high_bid}}</td>
+      <td>{{auction_listing.total_views}}</td>
+      <td>{{auction_listing.total_bids}}</td>
+      <td>{{auction_listing.bid_to_view_ratio}}</td>
+      <td>{{auction_listing.high_value_kw_count }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% block scripts %}
+<script>
+  $(document).ready(function () {
+    $('#data').DataTable({ paging: false });
+  });
+</script>
+{% endblock %} {% endblock %}

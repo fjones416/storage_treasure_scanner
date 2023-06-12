@@ -1,0 +1,11 @@
+/chromedriver_win32
+/myenv
+/.vscode
+/.ipynb_checkpoints
+/view_listings_locally.py
+/storage_scan_data.sqlite
+/__pycache__
+/upload_db_to_heroku.py
+/storage_scanner_dev.ipynb
+/storage_scanner_prod.ipynb
+/ngrok.exe
