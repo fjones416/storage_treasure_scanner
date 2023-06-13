@@ -1,6 +1,6 @@
 # Scraping Storage Auction Listings from Storage Treasures
 
-This is a web application designed to scrape, track, and manage auction listings. It uses a PostgreSQL database for data storage and persistence, and provides a set of HTTP APIs to interact view the data on the frontend.
+This is a web application designed to scrape Storage Treasures auction listings. It uses a PostgreSQL database for data storage and persistence, and provides a set of HTTP APIs to view the data on the frontend.
 
 ## Features
 
