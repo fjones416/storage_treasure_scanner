@@ -28,25 +28,24 @@ This is a web application designed to scrape, track, and manage auction listings
 1. Clone the repository to your local machine:
 
    ```
-   git clone <repository-url>
+   git clone https://github.com/fjones416/storage_treasure_scanner/
    ```
 
 2. Install the necessary Python dependencies:
 
    ```
-   pip install flask psycopg2
+   pip install selenium pandas psycopg2 twilio datetime re os
    ```
 
-3. Export your database URL as an environment variable:
-
-   ```
-   export DATABASE_URL=your_database_url
-   ```
-
-4. Run the app:
+3. Run the app.py script for the front end:
 
    ```
    python app.py
+   ```
+4. Run the storage_scanner_prod.py as a cron job:
+
+   ```
+   python storage_scanner_prod.py
    ```
 
 ## API Endpoints
@@ -57,10 +56,6 @@ This is a web application designed to scrape, track, and manage auction listings
 - `GET /run_auction_listing_scrape` - Initiates an auction listing scraping operation.
 - `GET /get_text_queue_listings` - Retrieves all auction listings currently in the queue from the database.
 - `GET /get_text_complete_listings` - Retrieves all completed auction listings from the database.
-
-## Contributions
-
-Contributions are welcome. Please make sure to update tests as appropriate.
 
 ## Notes
 
